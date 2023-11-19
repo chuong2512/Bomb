@@ -70,11 +70,7 @@ public abstract class BaseNetworkGameManager : SimpleLanNetworkManager
             ServerUpdate();
         if (IsClient)
             ClientUpdate();
-    }
-
-    protected override void FixedUpdate()
-    {
-        base.FixedUpdate();
+        
         if (IsServer && !doNotKeepPlayerScore)
         {
             // Store score
